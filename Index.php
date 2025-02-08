@@ -149,7 +149,7 @@ require './funciones/signin.php';
 
 <!-- PIE DE PAGINA -->
    <footer>
-        <p class="footer">© Fastnet, 2024. Internet por fibra óptica y telefonía ilimitada.</p>
+        <p class="footer">© Fastnet, 2025. Internet por fibra óptica y telefonía ilimitada.</p>
   </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -329,6 +329,36 @@ button:hover{
 
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
+    * {
+        -webkit-tap-highlight-color: transparent; /* Elimina el efecto azul en Android e iOS */
+        outline: none; /* Quita el contorno en elementos enfocados */
+    }
+
+    .body {
+        background-image:none;
+        background: linear-gradient(to right, #302b63, #2C5364, #A83279);
+        background-size: 300% 300%;
+        height: auto;
+        animation: color 15s ease-in-out infinite;
+        margin-bottom: 20%;
+    }
+
+    @keyframes color{
+        0%{
+          background-position: 100 50%;
+        }
+      
+        50%{
+          background-position: 100% 50%;
+        }
+      
+        100%{
+          background-position: 100 50%;
+        }
+      }
+
+    
+    
     .contenedor_logo {
         width: 90%; 
     }
@@ -344,7 +374,7 @@ button:hover{
     .footer {
         font-size: 100%; 
     }
-}
+
 /*animacion rotacion menu*/
 @keyframes rotate {
     from {
@@ -384,4 +414,105 @@ button:hover{
     cursor: pointer;
     color: white;
 }
+    .contenedor_logo {
+        text-align: center;
+        position: relative;
+        background-color: rgb(255, 255, 255); 
+        border-radius: 0.5cm;
+        height: 50px;
+        width: 80%;
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+    }
 
+    .contenedor_logo img{
+        width: 50%;
+        margin-top: 1%;
+        height: auto;
+    }
+    
+    .menu{
+        align-items: center;
+    }
+    .menu table {
+        display: grid;
+        width: 70%;
+        height: auto;
+        grid-template-columns: repeat(1, 1fr); /* 2 columnas */
+        gap: 10px; /* Espacio entre elementos */
+    }
+
+    .menu tr {
+        display: contents; /* Permite que los <th> se comporten como grid items */
+    }
+
+    .menu th {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    .menu img {
+        width: 80%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    
+    .contenedor{
+        display: none;
+    }
+    /* ESTILOS ESPECIFICOS DE CADA IMAGEN */
+    #vortex {
+        width: 700px;
+    }
+    
+    #prtg_clientes {
+        width: 400px;
+    }
+    
+    #prtg_main {
+        width: 400px;
+    }
+    
+    #prtg_enlaces {
+        width: 400px;
+    }
+    
+    #spiceworks {
+        width: 650px;
+    }
+    
+    #biotime {
+        width: 200px;
+    }
+    
+    #softv {
+        width: 150px;
+        height: 110px;
+    }
+    
+    #avisos {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        width: 150px;
+    }
+    
+    #mensaje{
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    footer {
+        background-color: rgb(35, 33, 33);
+        color: white;
+        font-size: 50%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2%;
+        z-index: 1000; 
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     
+    }
+}
