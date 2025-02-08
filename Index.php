@@ -1,0 +1,162 @@
+<?php
+session_start();
+require './funciones/login.php';
+require './funciones/sesion.php';
+require './funciones/signin.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST-NET</title>
+    <link rel="stylesheet" href="Index.css">
+    <script src="https://kit.fontawesome.com/7b6c91b891.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- CUERPO DE LA PAGINA -->
+    <body class="body">
+<!-- ICONO FASTNET PRINCIPAL -->
+<div class="contenedor_logo">
+    <a href="https://www.fast-net.com.mx" target="_blank">
+        <img src="./Imagenes/LOGO_FASTNET.png" alt="Logo_Fast-net">
+    </a>
+</div>
+<!-- MENU DE HERRAMIENTAS -->
+    <div class="menu">
+        <table>
+            <tr>
+                <th class="filas"><a href="https://fastnet.vortex-m2.com/auth/login" target="_blank"><img id="vortex" src="./Imagenes/LOGO_VORTEX.png" alt="Logo_vortex"></a></th>
+                <th class="filas"><a href="https://prtgcl.fast-net.net/index.htm" target="_blank"><img id="prtg_clientes" src="./Imagenes/CLIENTES.png" alt="Logo_prtg_clientes"></a></th>
+                <th class="filas"><a href="http://prtgmain.fast-net.net/index.htm" target="_blank"><img id="prtg_main" src="./Imagenes/MAIN.png" alt="Logo_prtg_main"></a></th>
+                <th class="filas"><a href="https://prtg.fast-net.net:8089/index.htm" target="_blank"><img id="prtg_enlaces" src="./Imagenes/ENLACES.png" alt="Logo_prtg_enlaces"></a></th>
+                <th class="filas"><a href="https://accounts.spiceworks.com/sign_in?policy=hosted_help_desk&success=https://on.spiceworks.com" target="_blank"><img class="foto_pequeña" id="spiceworks"src="./Imagenes/LOGO_SPICEWORKS.png" alt="Logo_spiceworks"></a></th>
+            </tr>
+                
+            <tr> 
+                <th class="filas"><a href="http://45.188.76.34:8081/login/?next=/" target="_blank"><img id="biotime" src="./Imagenes/BIOTIME.png" alt="Logo_biotime"></a></th>
+                <th class="filas"><a href="http://softv.fast-net.net:8000/app/#!/auth" target="_blank"><img id="softv" src="./Imagenes/SOFTV.png" alt="Logo_softv"></a></th>
+                <th class="filas"><a href="https://aurorainbox.com/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DAurora.Web%26redirect_uri%3Dhttps%253A%252F%252Fapp.aurorainbox.com%252Fauthentication%252Flogin-callback%26response_type%3Dcode%26scope%3Daurora.api.tenant%2520aurora.identityapi.tenant%2520openid%2520profile%26state%3D2eced4b0c02246f49abad1b1286934dc%26code_challenge%3Da0sEmgSallI0ajpTaqPNbK7BzVDlJTODTxlspLRCYoA%26code_challenge_method%3DS256%26response_mode%3Dquery" target="_blank"><img id="avisos" src="./Imagenes/aurora.png" alt="Icono_Aurora"></a></th>
+                <th class="filas"><a href="https://www.google.com/" target="_blank"><img id="avisos" src="./Imagenes/Google.png" alt="Google"></a></th>
+                <th class="filas"><a href="http://intranet.fast-net.net/Avisos/login.php" target="_blank"><img id="avisos" src="./Imagenes/avisos.png" alt="Logo_avisos"></a></th>
+            </tr>
+        </table>
+    </div>
+
+<!-- POPUP LOGIN -->
+<?php if (empty($sesion)): ?>
+    <section id="loginPopup" class="hidden">
+        <div class="contenedor-login">
+            <span id="closePopup" class="close-btn">&times;</span>
+            <div class="formulario">
+                <form method="POST" onsubmit="return validarLogin()">
+                    <h2>Iniciar Sesión</h2>
+
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input id="email" type="email" name="email" required>
+                        <label for="email">Correo</label>
+                    </div>
+
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="password" type="password" name="password" required>
+                        <label for="password">Contraseña</label>
+                    </div>
+
+                    <div>
+                        <button type="submit" name="login">Acceder</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+ <!--REGISTRO DE USUARIOS -->
+ <?php if (!empty($sesion)): ?>
+ <section id="loginPopup" class="hidden">
+  <div class="contenedor-login">
+  <span id="closePopup" class="close-btn">&times;</span>
+    <div class="formulario">
+      <form method="POST" onsubmit="return validarRegistro()">
+        <h2>Registrar Usuario</h2>
+
+        <div class="input-contenedor">
+          <i class="fa-solid fa-envelope"></i>
+          <input id="emailRegistro" type="email" name="email" required>
+          <label for="#">Correo</label>
+        </div>
+
+        <div class="input-contenedor">
+          <i class="fa-solid fa-lock"></i>
+          <input id="passwordRegistro" type="password" name="password" required>
+          <label for="#">Contraseña</label>
+        </div>
+
+        <div>
+        <button type="submit" name="signin">Registrar</button>
+
+      </div>
+      </form>
+    </div>
+  </div>
+ </section>
+ <?php endif; ?>
+
+<!-- BOTON FLOTANTE -->
+<div class="contenedor">
+    <div class="contenedor-btn">
+        <button class="botonF1" <?php if (!empty($sesion)): ?>onclick="cerrarSesion()"<?php else: ?> id="openPopup" <?php endif; ?>>
+            <span><?php if (!empty($sesion)): ?><img class="usuario-img" src="./imagenes/logout.png" alt=""><?php else: ?><img class="usuario-img" src="./imagenes/usuario.png" alt=""><?php endif; ?></span>
+        </button>
+        <span class="tooltip"><?php if (!empty($sesion)){ echo ("Bienvenido " . $sesion['UsuarioEmail']); }else { echo("Inicia Sesión");} ?></span>
+    </div>
+    <?php if (!empty($sesion)): ?>
+    <div class="contenedor-btn">
+        <a href="/documentos/REGLAMENTO INTERNO DE TRABAJO - RIT - 2024- APROBADO.pdf" target="_blank"><button class="btn botonF2">
+              <span><img src="./imagenes/reglamento.png" alt=""></span>
+          </button>
+        </a>
+        <span class="tooltip">Reglamento del Empleado</span>
+    </div>
+    <?php if ($sesion['UsuarioPrivilegio'] == 2): ?>
+    <div class="contenedor-btn">
+        <button class="btn botonF3" <?php if (!empty($sesion)): ?> id="openPopup" <?php endif; ?>>
+            <span><img src="./imagenes/registrar.png" alt=""></span>
+        </button>
+        <span class="tooltip">Registrar Usuarios</span>
+    </div>
+    <?php endif; ?>
+    <!-- <div class="contenedor-btn">
+        <button class="btn botonF4">
+            <span>+</span>
+        </button>
+        <span class="tooltip">Bienvenido</span>
+    </div>
+    <div class="contenedor-btn">
+        <a href=""><button class="btn botonF5">
+            <span>+</span>
+        </button>
+        </a>
+        <span class="tooltip">Cerrar Sesión</span>
+    </div> -->
+    <?php endif; ?>
+</div>
+
+
+<!-- PIE DE PAGINA -->
+   <footer>
+        <p class="footer">© Fastnet, 2024. Internet por fibra óptica y telefonía ilimitada.</p>
+  </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./funciones.js"></script>
+<?php
+include './funciones/alertas.php';
+?>
+
+    </body>
+</html>

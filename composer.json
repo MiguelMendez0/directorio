@@ -1,0 +1,15 @@
+{
+    "name": "esarrollo02/directorio",
+    "description": "Excel PHP",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phpoffice\\Phpspreadsheet\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

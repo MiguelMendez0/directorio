@@ -1,0 +1,32 @@
+#sidebar{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: black;
+    z-index: 999;
+    transition: all 500ms linear;
+    font-family: sans-serif;
+  }
+  #sidebar ul li{
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    list-style: none;
+    border-bottom: 1px solid rgba(100,100,100,.3)
+  }
+  .Logo{
+    border-radius: 50%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  #sidebar a:hover{
+    color:darkgrey;
+    
+  }
+  #sidebar a{
+    text-decoration: none;
+    color: blueviolet;
+  }

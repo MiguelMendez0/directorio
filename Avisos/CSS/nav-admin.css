@@ -1,0 +1,61 @@
+body{
+  background-color: white;
+}
+#sidebar{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: black;
+    z-index: 999;
+    transition: all 500ms linear;
+  }
+  #sidebar ul{
+    background-color: #6a348b;
+    position: relative;
+    right: 40px;
+    width: 200px;
+    top: -20px;
+  }
+
+  #sidebar li{
+    position: relative;
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+    list-style: none;
+    font-family:sans-serif;
+    font-style:initial;
+    height: 70px;
+  }
+  .Logo{
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #sidebar a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+
+  #sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); ;
+    color: white;
+    transform: scale(1.1);
+}
+
+  .container.p-4{
+    position: relative;
+    left: 100px;
+  }
+
+  .lista_usuarios{
+    position: relative;
+    left: 200px;
+  }
