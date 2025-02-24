@@ -22,22 +22,35 @@ $('.botonF1').hover(function(){
 });
 
 /*BOTON POPUP*/
-const openBtn = document.getElementById('openPopup');
-const popup = document.getElementById('loginPopup');
-const closeBtn = document.getElementById('closePopup');
-  openBtn.addEventListener('click', () => {
-    popup.classList.add('popup');
-    popup.classList.remove('hidden');
-  });
+document.addEventListener("DOMContentLoaded", function() {
+  const openBtn = document.getElementById('openPopup'); // Cambio aquí
+  const popup = document.getElementById('loginPopup');
+  const closeBtn = document.getElementById('closePopup');
 
-  closeBtn.addEventListener('click', () => {
-    popup.classList.remove('popup');
-    popup.classList.add('hidden');
+  if (openBtn) {
+      openBtn.addEventListener('click', () => {
+          popup.classList.add('popup');
+          popup.classList.remove('hidden');
+      });
+  }
 
-  });
-  
+  if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+          popup.classList.remove('popup');
+          popup.classList.add('hidden');
+      });
+  }
+
   window.addEventListener('click', (e) => {
-    if (e.target === popup) {
-      popup.classList.add('hidden');
-    }
+      if (e.target === popup) {
+          popup.classList.add('hidden');
+      }
   });
+});
+
+$('.botonF1').hover(function(){
+  $('.btn').addClass('animacionVer');
+}, function(){
+  $('.btn').removeClass('animacionVer'); // Esto hará que desaparezcan al salir del hover
+});
+
