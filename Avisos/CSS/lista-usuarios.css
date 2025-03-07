@@ -179,8 +179,17 @@ table td {
 }
 
 .lista_atenciones {
-  position: relative;
-  left: 200px;
+  position: absolute;
+  right: 0;
+  width: 90%;
+}
+
+.lista_atenciones th{
+  background-color: #2c3845;
+}
+
+.lista_atenciones td{
+  text-align: center;
 }
 .lista_avisos {
   position: absolute;
