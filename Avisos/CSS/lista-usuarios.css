@@ -1,118 +1,238 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  background-color: rgb(29, 28, 41);
 }
 
-.header{
-    margin: 0 auto;
-    position: relative;
-    left: 200px;
-    width: 100%;
-    text-align: center;
-    background-color:rgb(236, 99,56);
-    color: white;
-}
-#container h1{
-    font-size: 35pt;
-    display: inline-block;
-    
-}
-table{
-   
-    border-collapse: collapse;
-    font-size: 12pt;
-    font-family: sans-serif;
-    width:100%;
-    margin: 0 auto;
-}
-table th{
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgb(106, 52, 139);
-    color: white;
-    font-size: 14px;
-}
-table tr:nth-child(odd){
-    background: rgb(161, 128, 161);
-}
-table td{
-    padding: 10px;
+.header {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: #464646;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
 }
 
-.lista a{
-    text-decoration: none;
-    color: black;
-}
-.lista a:hover{
-    background: black;
-    color: white;
-}
-.lista{
-    text-align: center;
-    
+#container {
+  width: 100%;
 }
 
-#container_historial{
-    position: relative;
-    left: 200px;
-    
+#container h1 {
+  font-size: 35pt;
+  display: inline-block;
 }
 
-.lista_historial a{
-    text-decoration: none;
-    color: inherit;
+table {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-family: sans-serif;
+  width: auto;
+  margin: 0 auto;
+  background-color: #2c3845;
+  color: white;
+  border-radius: 30px;
+  text-transform: capitalize;
+  margin-right: auto;
+}
+table th {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgb(29, 28, 41);
+  color: white;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+table tr:nth-child(odd) {
+  background: rgb(29, 28, 41);
+  color: white;
+}
+table td {
+  text-align: justify;
+  font-size: 15px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-transform: capitalize;
+  font-size: 12px;
 }
 
-.row{
-    position: relative;
-    left:-20px;
+#estado_aviso {
+  font-size: 12px;
+  text-align: start;
+  padding-left: 5%;
+  padding-right: 2%;
+  width: 30%;
+  height: auto;
+  font-weight: 700;
+  text-transform: capitalize; /* Convierte todo a minúsculas */
 }
 
-.lista_atenciones{
-    position: relative;
-    left: 200px;
-   
-}
-.lista_avisos{
-    position: relative;
-    left: 200px;
-}
-#aviso_descripcion{
-    width: 200px;
-}
-.lista_avisos tr{
-   text-align: center;
+#fecha_inicio {
+  text-align: center;
 }
 
-.lista_avisos a{
-    text-decoration: none;
-    color: inherit;
+#hora_inicio {
+  text-align: center;
 }
 
-#container_atenciones{
-    position: relative;
-
-}
-#container_avisos{
-    position: relative;
-    position: 500px;
-    
+#hora_final {
+  text-align: center;
 }
 
-#th_estado{
-    width: 50px;
+#aviso_desc {
+  width: 30%;
+  height: auto;
+  text-align: start;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-transform: capitalize;
 }
-#th_fecha_inicio{
-    width: 100px;
+#end {
+  text-align: center;
 }
-#th_hora_inicio{
-    width: 100px;
+
+#end a {
+  background-color: rgb(0, 188, 235);
+  color: white;
+  font-weight: 700;
+  padding: 5%; /* Forma más corta de escribir padding */
+  font-size: 12px;
+  border-radius: 30px;
+  transition: transform 0.3s ease; /* Asegura que la transición funcione */
+  display: inline-block; /* Necesario para que transform funcione correctamente */
 }
-#th_hora_final{
-    width: 100px;
+
+#end a:hover {
+  transform: scale(1.1);
+  background-color: red;
 }
-#th_aviso_descripcion{
-    width: 600px;
+
+.lista_usuarios {
+  width: 80%;
+  position: absolute;
+  right: 0;
+}
+
+.link-delete {
+  background-color: rgb(0, 188, 235);
+  color: white;
+  font-weight: 700;
+  padding: 5%; /* Forma más corta de escribir padding */
+  font-size: 12px;
+  border-radius: 30px;
+  transition: transform 0.3s ease; /* Asegura que la transición funcione */
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link-delete:hover {
+  transform: scale(1.1);
+  background-color: red;
+}
+
+#lista_usuarios_tr th {
+  text-align: center;
+}
+
+#info_usua td {
+  width: 80%;
+  text-align: center;
+}
+#info_usua #usu_nombre {
+  width: 30%;
+}
+
+#info_usua #usu_log {
+  width: 20%;
+}
+
+.lista a {
+  text-decoration: none;
+  color: black;
+}
+.lista a:hover {
+  background: black;
+  color: white;
+}
+.lista {
+  text-align: center;
+}
+
+#container_historial {
+  position: relative;
+  left: 200px;
+}
+
+.lista_historial a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.row {
+  position: relative;
+  left: -20px;
+}
+
+.lista_atenciones {
+  position: relative;
+  left: 200px;
+}
+.lista_avisos {
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 0;
+}
+#aviso_descripcion {
+  width: 200px;
+}
+.lista_avisos tr {
+  text-align: center;
+}
+
+.lista_avisos a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#container_atenciones {
+  position: relative;
+}
+#container_avisos {
+  position: relative;
+  position: 500px;
+}
+
+#th_estado {
+  width: 50px;
+}
+#th_fecha_inicio {
+  width: 100px;
+}
+#th_hora_inicio {
+  width: 100px;
+}
+#th_hora_final {
+  width: 100px;
+}
+#th_aviso_descripcion {
+  width: 600px;
+}
+
+@media (max-width: 1920px) {
+  .lista_avisos {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: auto;
+  }
+
+  table td {
+    font-size: 15px;
+  }
 }

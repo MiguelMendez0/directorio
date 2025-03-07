@@ -56,22 +56,22 @@ if (!isset($_SESSION['rol'])) {
                     <div class="card card-body">
                         <form action="" method="POST">
                             <div class="form-group">
-                                <input type="text" name="asistencia" class="form-control" placeholder="ZONA" require>
+                                <input type="text" name="asistencia" class="form-control" placeholder="Zona" require>
                             </div>
                             <div class="form-group">
-                                <input type="number" name="tarjeta" class="form-control" placeholder="TARJETA" require>                               
+                                <input type="number" name="tarjeta" class="form-control" placeholder="Tarjeta" require>                               
                             </div>
                             <div class="form-group">
-                                <input type="number" name="puerto" class="form-control" placeholder="PUERTO" require>                               
+                                <input type="number" name="puerto" class="form-control" placeholder="Puerto" require>                               
                             </div>
                             <div class="form-group">
-                                <input type="number" name="reporte" class="form-control" placeholder="NO. REPORTE" require>
+                                <input type="number" name="reporte" class="form-control" placeholder="No.Reporte" require>
                             </div>
                             <div class="form-group">
-                                <input type="number" name="caidas" class="form-control" placeholder="NUMERO AFECTADOS" require>
+                                <input type="number" name="caidas" class="form-control" placeholder="Numero de afectados" require>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="descripcion" class="form-control" placeholder="OBSERVACION" require>
+                                <input type="text" name="descripcion" class="form-control" placeholder="Observaciones" require>
                             </div>
                             <input type="submit" class="btn btn-primary btn-success btn-block" name="save" value="Guardar">
                             <a href="contactos.php" class="btn btn-secondary btn-lg btn-block">Regresar</a>
@@ -98,7 +98,7 @@ if (!isset($_SESSION['rol'])) {
                                     $result=mysqli_query($conn,$query);
                                     while($row=mysqli_fetch_array($result)) {?>
                                     <tr>
-                                        <td><?php echo $row ['fecha']?></td>
+                                        <td id="fecha_tabla"><?php echo $row ['fecha']?></td>
                                         <td><?php echo $row ['asistidos']?></td>
                                         <td><?php echo $row ['tarjeta']?>/<?php echo $row ['puerto']?></td>
                                         <td><?php echo $row ['caidos']?></td>

@@ -81,17 +81,14 @@ img {
 }
 
 #prtg_delicias {
-<<<<<<< HEAD
-=======
-    width: 400px;
-}
-
-#prtg_main {
->>>>>>> bf54f38 (actualizacion)
     width: 400px;
 }
 
 #prtg_allende {
+    width: 400px;
+}
+
+#prtg_main {
     width: 400px;
 }
 

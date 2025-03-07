@@ -1,48 +1,69 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
 }
-.admin{
-    margin: 0 auto;
-    position: relative;
-    left: 200px;
-    text-align: center;
-    background-color:rgb(236, 99,56);
-    font-weight: bold;
-    color:white;
-    
-}
-.link-edit{
-    color: #0ca4ce;
-}
-.link-delete{
-    color: #f26b6b;
-}
-.data_delete{
-    text-align: center;
-}
-.data_delete h2{
-    font-size: 12pt;
-}
-.data_delete span{
-    font-weight: bold;
-    color: #4f72d4;
-    font-size: 12pt;
-}
-.btn_cancel, .btn_ok{
-    width: 124px;
-    background: #478ba2;
-    color: #fff;
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 15px;
+.admin {
+  width: 90%;
+  position: absolute;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #464646;
+  font-weight: bold;
+  color: white;
 }
 
-.row{
-    position: relative;
-    left: -80px;
+.container {
+  margin-right: 20%;
+}
+
+.row {
+  display: flex;
+  margin: 10%;
+}
+
+.card-body {
+  background-color: #2c3845;
+  border: 1px solid white;
+}
+
+input[placeholder] {
+  font-size: 15px;
+}
+
+form input .link-edit {
+  color: #0ca4ce;
+}
+
+.link-delete {
+  color: #f26b6b;
+}
+.data_delete {
+  text-align: center;
+}
+.data_delete h2 {
+  font-size: 12pt;
+}
+.data_delete span {
+  font-weight: bold;
+  color: #4f72d4;
+  font-size: 12pt;
+}
+.btn_cancel,
+.btn_ok {
+  width: 124px;
+  background: #478ba2;
+  color: #fff;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.row {
+  position: relative;
+  left: -80px;
 }

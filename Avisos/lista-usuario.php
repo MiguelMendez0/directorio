@@ -34,7 +34,7 @@ session_start();
     <section id = "container">
 
         <table class="lista_usuarios">
-            <tr>
+            <tr id="lista_usuarios_tr">
                 <!--<th>ID</th>-->
                 <th>NOMBRE</th>
                 <th>USUARIO</th>
@@ -51,10 +51,10 @@ session_start();
             if ($result > 0) {
                 while ($data = mysqli_fetch_array($query)) {
             ?>        
-                    <tr>
+                    <tr id="info_usua">
                             <!--<td><?php echo $data["id_usuario"]; ?> </td>-->
-                            <td><?php echo $data["nombre"]; ?></td>
-                            <td><?php echo $data["username"]; ?></td>
+                            <td id="usu_nombre"><?php echo $data["nombre"]; ?></td>
+                            <td id="usu_log"><?php echo $data["username"]; ?></td>
                             <td><?php echo $data["telefono"]; ?></td>
                             <td><?php echo $data["fecha"]; ?></td>
                             <td><?php echo $data["sexo"]; ?></td>

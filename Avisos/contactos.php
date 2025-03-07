@@ -51,12 +51,12 @@ include 'database.php';
                 while ($data = mysqli_fetch_array($query)) {
             ?>        
                     <tr>
-                            <td ><?php echo $data["nombre"]; ?> </td>
-                            <td><?php echo $data["email"]; ?></td>
-                            <td><?php echo $data["telefono"]; ?></td>
-                            <td><?php echo $data["asunto"]; ?></td>
-                            <td><?php echo $data["mensaje"]; ?></td>
-                            <td><a class="link-edit" href="eliminar-bitacora.php?eliminar=<?php echo $data['id_contactos'];?>">Finalizar</a></td>
+                            <td id="estado_aviso"><?php echo $data["nombre"]; ?> </td>
+                            <td id="fecha_inicio"><?php echo $data["email"]; ?></td>
+                            <td id="hora_inicio"><?php echo $data["telefono"]; ?></td>
+                            <td id="hora_final"><?php echo $data["asunto"]; ?></td>
+                            <td id="aviso_desc"><?php echo $data["mensaje"]; ?></td>
+                            <td id="end"><a class="link-edit" href="eliminar-bitacora.php?eliminar=<?php echo $data['id_contactos'];?>">Finalizar</a></td>
                             
                             </tr>
          <?php                   

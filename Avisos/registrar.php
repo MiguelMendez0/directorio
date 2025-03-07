@@ -117,7 +117,7 @@ if (!empty($_POST)) {
                 <option value="<?php echo $rol['id_tipo']; ?>"> <?php echo $rol['rol'] ?> </option>
                 <?php }}?>
             </select>
-            <input type="submit" value="Registrar usuario">
+            <input type="submit" value="Registrar usuario" id="btn-reg">
 
             
         </form>

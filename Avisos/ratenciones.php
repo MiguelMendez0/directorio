@@ -79,8 +79,9 @@ for ($i = 0; $i < count($avisos); $i++) {
     // Ejemplo: echo $row['campo'];
 
             ?>
-
-        <a href="contactos.php"><div class="tabla_detalles">
+           <div class="contenedorgrid">
+            <div class="main">
+       
         <table id="tabla_avisos<?php if ($i>0) { echo $i + 1;}?>"> 
             <thead>
             <tr>
@@ -89,11 +90,9 @@ for ($i = 0; $i < count($avisos); $i++) {
             <tr>
                 <td><?php echo ($row ['mensaje']); ?></td>
             </tr>
-            
-            </tr>
         </table>
-    </div>
-    </a>
+</div>
+
     <?php } ?>
     <!--<div class="tabla_detalles">
         <table id="tabla_avisos2"> 
@@ -164,8 +163,9 @@ while ($row = mysqli_fetch_array($result)) {
     // Ejemplo: echo $row['campo'];
     $increment = $increment + 1;
             ?>
-    <a href="bitacora.php"><div class="tabla_detalles">
-        <table id="tabla<?php echo $increment; ?>"> 
+
+    <div class="main2">
+        <table id="tabla<?php echo $increment; ?>" class="tablaratenciones"> 
         <thead>
             <tr>
                 <th colspan="2">INCIDENCIAS</th>
@@ -184,8 +184,10 @@ while ($row = mysqli_fetch_array($result)) {
             </tr>
         </table>
     </div>
-    </a>
+ 
+    
     <?php } ?>
+    </div>
     <!--<div class="tabla_detalles">
         <table id="tabla3"> 
         <thead>
@@ -267,6 +269,7 @@ while ($row = mysqli_fetch_array($result)) {
             </tr>
         </table>
     </div>-->
+   
 
   <div class="login-box">
       
@@ -280,7 +283,7 @@ while ($row = mysqli_fetch_array($result)) {
             <input name="cliente"type="text" placeholder="NOMBRE DEL CLIENTE" required>
             <!---clasificacion del problema--->
             <label for="clasificacionp">Clasificacion del Problema</label>
-            <select name="clasificacionp" id="" required>
+            <select name="clasificacionp" id="clasi_prob" required>
             <option disabled selected>Seleccionar</option>
             <option value="CABLE/FIBRA BAJO">CABLE/FIBRA BAJO</option>
             <option value="LED LOS ENCENDIDO">LED LOS ENCENDIDO</option>
@@ -309,7 +312,7 @@ while ($row = mysqli_fetch_array($result)) {
             <br>
             <!---clasificacion de la solucion--->
             <label for="clasificacions">Clasificacion de la Solución</label>
-            <select name="clasificacions" id="" required>
+            <select name="clasificacions" id="clasi_solu" required>
             <option disabled selected>Seleccionar</option>
             <option value="ACTUALIZACION DE DATOS">ACTUALIZACIÓN DE DATOS</option>
             <option value="ACTUALIZACION DE ONT">ACTUALIZACIÓN DE ONT</option>
