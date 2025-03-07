@@ -35,7 +35,7 @@
 }
 .login-box input {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .login-box input[type="text"],
 .login-box input[type="password"] {
@@ -171,6 +171,18 @@ select {
 #tabla6 {
   z-index: 10;
   width: 300px; /* Asegura que esté por encima de otros elementos */
+}
+
+.tabla_detalles {
+  margin-left: 20%;
+}
+
+.tabla_detalles table {
+  margin-bottom: 2%;
+}
+
+#tecnico_sel {
+  position: relative;
 }
 
 table {

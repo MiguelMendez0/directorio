@@ -81,7 +81,6 @@ for ($i = 0; $i < count($avisos); $i++) {
 
         <a href="contactos.php"><div class="tabla_detalles">
         <table id="tabla_avisos<?php if ($i>0) { echo $i + 1;}?>"> 
-            <thead>
             <tr>
                 <th>AVISOS</th>
             </tr>
@@ -288,7 +287,7 @@ while ($row = mysqli_fetch_array($result)) {
             <input name="reporte" type="text" placeholder="NO. REPORTE" required>
             <!---tecnico-->
             <label for="tecnico">Tecnico</label>
-            <select name="tecnico" id="">
+            <select name="tecnico" id="tecnico_sel">
             <option disabled selected>Seleccionar</option>
             <option value="Aram Noé Carreón Ríos">Aram Noé Carreón Ríos</option>
             <option value="Carlos Alberto Alvarez Alejó">Carlos Alberto Alvarez Alejó</option>
