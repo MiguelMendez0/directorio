@@ -19,9 +19,10 @@ if (!isset($_SESSION['rol'])) {
         $solucion=$_POST['solucion'];
         $reporte=$_POST['reporte'];
         $tecnico=$_POST['tecnico'];
+        $horaFinal=$_POST['hora-final'];
         $hora=$_POST['hora'];
         $fecha=$_POST['fecha'];
-        $query = "INSERT INTO atencionesm(AtencionMUsuario, AtencionMContrato, AtencionNMCliente, AtencionMRazon, AtencionMSolucion, AtencionMReporte, AtencionMTecnico, AtencionMHora, AtencionMFecha) VALUES('$usuario', '$contrato','$cliente','$razon','$solucion','$reporte','$tecnico','$hora','$fecha')";
+        $query = "INSERT INTO atencionesm(AtencionMUsuario, AtencionMContrato, AtencionNMCliente, AtencionMRazon, AtencionMSolucion, AtencionMReporte, AtencionMTecnico, AtencionMHora, AtencionMHoraFinal, AtencionMFecha) VALUES('$usuario', '$contrato','$cliente','$razon','$solucion','$reporte','$tecnico','$hora', '$horaFinal','$fecha')";
         $result=mysqli_query($conn,$query);
         if (!$result) {
             echo '<script language="javascript">alert("No se ha podido guardar");</script>';
@@ -311,8 +312,10 @@ while ($row = mysqli_fetch_array($result)) {
             <option value="Lorenzo Benjamín Lázaro Cordova">Lorenzo Benjamín Lázaro Cordova</option>
             <option value="Manuel Antonio Mendez Dennis">Manuel Antonio Mendez Dennis</option>
             <option value="Wilber Carrillo Cordoba">Wilber Carrillo Cordoba</option>
-            <option value="Pedro Enrique Laguna Hernandez">Pedro Enrique Laguna Hernandez </option>
+            <option value="Pedro Enrique Laguna Hernandez">Pedro Enrique Laguna Hernandez</option>
+            <option value="Osvaldo Perez Hernandez">Osvaldo Perez Hernandez</option>
             <option value="Angel Rodriguez">Angel Rodriguez</option>
+            <option value="Jorge Alberto Rodriguez Hernandez">Jorge Alberto Rodriguez Hernandez</option>
             <option value="Yadira Ramos - Pichucalco">Yadira Ramos - Pichucalco</option>
             <option value="Rocio González - Jalapa">Rocio González - Jalapa</option>
             <option value="Marcela Dias - Teapa">Marcela Dias - Teapa</option>
@@ -321,13 +324,20 @@ while ($row = mysqli_fetch_array($result)) {
             <option value="Cajera">Cajera</option>
             <option value="Oscar Mendez - Chihuahua">Oscar Mendez - Chihuahua</option>
             <option value="NOC">NOC</option>
+            <option value="Naun Hernandez Lopez">Naun Hernandez Lopez</option>
+            <option value="Gerardo Lopez Cortazar">Gerardo Lopez Cortazar</option>
+            <option value="Soporte Tecnico">Soporte Tecnico</option>
+            <option value="Lider de Zona">Lider de Zona</option>
             </select>
-            <!---hora--->
+            <!---hora inicio--->
             <label for="hora">Hora</label>
             <input id="hora" name="hora" type="time" placeholder="HORA" required>
+            <!---hora final--->
+            <label for="hora-final">Hora Final</label>
+            <input id="hora-final" name="hora-final" type="time" placeholder="HORA FINAL" required>
             <!---fecha-->
             <label for="fecha">Fecha</label>
-            <input id="fecha" name="fecha" type="date" placeholder="FECHA"  readonly required>
+            <input id="fecha" name="fecha" type="date" placeholder="FECHA" required>
             </select>
             <br></br>
             <input type="submit" name="save" value="Guardar Atencion">

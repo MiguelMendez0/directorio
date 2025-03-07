@@ -81,10 +81,17 @@ img {
 }
 
 #prtg_delicias {
+<<<<<<< HEAD
+=======
     width: 400px;
 }
 
-#prtg_enlaces {
+#prtg_main {
+>>>>>>> bf54f38 (actualizacion)
+    width: 400px;
+}
+
+#prtg_allende {
     width: 400px;
 }
 
@@ -471,13 +478,28 @@ button:hover{
     }
     
     #prtg_clientes {
+<<<<<<< HEAD
         width: 400px;
+=======
+        width: 120px;
+>>>>>>> bf54f38 (actualizacion)
     }
 
     #prtg_delicias {
         width: 120px;
     }
     
+<<<<<<< HEAD
+=======
+    #prtg_allende {
+        width: 120px;
+    }
+
+    #prtg_main {
+        width: 120px;
+    }
+    
+>>>>>>> bf54f38 (actualizacion)
     #spiceworks {
         width: 650px;
     }
