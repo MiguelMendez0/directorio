@@ -1,3 +1,7 @@
+body {
+  background-color: grey;
+}
+
 .login-box {
   width: 500px;
   height: auto;

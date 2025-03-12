@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   height: 100vh;
-  background-color: rgb(29, 28, 41);
+  background-color: rgb(165, 165, 165);
 }
 
 .header {
@@ -34,19 +34,17 @@ table {
   font-family: sans-serif;
   width: auto;
   margin: 0 auto;
-  background-color: #2c3845;
+  background-color: #ecd1d1;
   color: white;
   border-radius: 30px;
-  text-transform: capitalize;
   margin-right: auto;
 }
 table th {
   text-align: center;
   padding: 10px 20px;
-  background-color: rgb(29, 28, 41);
+  background-color: rgb(165, 165, 165);
   color: white;
   font-size: 14px;
-  text-transform: capitalize;
 }
 table tr:nth-child(odd) {
   background: rgb(29, 28, 41);
@@ -69,7 +67,6 @@ table td {
   width: 30%;
   height: auto;
   font-weight: 700;
-  text-transform: capitalize; /* Convierte todo a minúsculas */
 }
 
 #fecha_inicio {
@@ -184,11 +181,11 @@ table td {
   width: 90%;
 }
 
-.lista_atenciones th{
+.lista_atenciones th {
   background-color: #2c3845;
 }
 
-.lista_atenciones td{
+.lista_atenciones td {
   text-align: center;
 }
 .lista_avisos {
