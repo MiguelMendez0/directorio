@@ -116,6 +116,10 @@ img {
     width: 150px;
 }
 
+#olt-manager {
+    width: 700px;
+}
+
 #mensaje {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
